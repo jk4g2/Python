@@ -12,7 +12,16 @@
 
 
 # format()이용
+msg = "{}님 오늘도 행복합시다"
+print(msg.format('홍길동'))
+print(msg.format('홍길자'))
+msg = "{0}님 오늘도 행복하세요. - {1}로부터"
+print(msg.format('홍길동','한국'))
+msg = "{1}님 오늘도 행복하세요. - {0}로부터"
+print(msg.format('홍길동','한국'))
 
+#msg = "{1}님 오늘도 행복하세요. - {2}로부터"
+#print(msg.format('홍길동','한국'))
 
 # [참고] http://pyformat.info
 
@@ -20,11 +29,13 @@
 name = '홍길동'
 age = 22
 height = 170.456
-
-
+print('%s님은 %d세이고, 신장은 %.2f cm 입니다' %(name,age,height))
 
 
 #--------------------------------------------------
 # 실수인 경우
-
-
+su = 99.9999999
+print('내가 좋아하는 숫자는',su, '이다')
+print('내가 좋아하는 숫자는 %.2f 이다' %(su))
+print('내가 좋아하는 숫자는 {0} 이다'.format(su))
+print('내가 좋아하는 숫자는 {0:.2f} 이다'.format(su))
