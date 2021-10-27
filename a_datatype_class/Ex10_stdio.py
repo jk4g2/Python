@@ -105,9 +105,9 @@ for i in range(65,91): # 아스키코드 65..91 은 (A..Z+1)
     if(count==3): #규칙이
         num = num + 1
         count = 0;
-    if(i == 90): #9번 키패드가 4개이므로.
+    if(i == 90): #9번 키패드가 4개 - Z 추가
         dictionary[chr(int(i))] = num-1
-    elif(i == 83): #7번키패드 4개
+    elif(i == 83): #7번키패드 4개 S 추가
         dictionary[chr(int(i))] = num-1
         count = 0;
     else:
