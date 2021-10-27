@@ -94,7 +94,7 @@ print(numpy.std(list1))
 print()
 """
 
-
+"""
 input_str = input("문자열을 입력하시오: ")
 count = 0
 num = 2
@@ -107,7 +107,7 @@ for i in range(65,91): # 아스키코드 65..91 은 (A..Z+1)
         count = 0;
     if(i == 90): #9번 키패드가 4개 - Z 추가
         dictionary[chr(int(i))] = num-1
-    elif(i == 83): #7번키패드 4개 S 추가
+    elif(i == 83): #7번 키패드 4개 S 추가
         dictionary[chr(int(i))] = num-1
         count = 0;
     else:
@@ -119,9 +119,14 @@ for i in input_str:
     answer += str(dictionary[str(i)])
 
 print(answer)
-
+"""
 
 # -------------------------------------------------------
 # 명령행 매개변수 받기 - java의 main() 함수의 인자
 # [ 콘솔에서 실행 ] python Ex10_stdio.py ourserver scott tiger
 #                                   0      1      2      3
+
+import sys
+args = sys.argv[0:]
+for i in args:
+    print(i)

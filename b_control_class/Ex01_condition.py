@@ -34,10 +34,39 @@ i8=dict()
 i9={}
 i10=None
 
+a = -1
+if a:
+    print('True') #
+else:
+    print('False')
+
+if not a:
+    print('True')
 
 
+#----------------------------------------------------------------------
+#2) 논리연산자 이용
+a = 10
+b = -1
+if a and b:
+    print('True3')#
+else:
+    print('False3')
+if a or b:
+    print('True4')#
+else:
+    print('False4')
 
+print(a and b) #둘다 0이 아니면 b값이 나온다.
+print(a or b) #True인 값만 나온다
 
-
-
-
+#-----------------------------------------------------------------------
+#3)
+a = 10
+if a:
+    c = 2
+elif b:
+    c = 4
+else:
+    c = 6
+print(c) #2

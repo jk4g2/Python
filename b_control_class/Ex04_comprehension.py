@@ -12,11 +12,11 @@
 
     * 셋 컨프리핸션
         { 표현식 for 표현식 in 순회가능객체 }
-
 """
 
-
 # 컨프리핸션 사용하지 않은 리스트 생성
+
+"""
 alist = []
 alist.append(1)
 alist.append(2)
@@ -33,21 +33,49 @@ print(alist)
 
 alist = list(range(1,7))
 print(alist)
-
+"""
 
 #------------------------------------------------
 # 리스트 컨프리핸션
+blist = [n for n in range(1,7)]
+print(blist)
+
+blist = [n*2 for n in range(1,7)] #연산도 가능
+print(blist)
+
+blist = [n*2 for n in range(1,7) if n%2==1] #조건문 쌉가능
+print(blist)
+
+# r : 1~3
+# c : 1~2
+clist=[ (r,c)for r in range(1,4) for c in range(1,3)]
+print(clist)
+#[(1,1),(1,2),(2,1),(2,2),(3,1),(3,2)]
+
+clist_with_for_loop = []
+for i in range(1,4):
+    for j in range(1,3):
+        clist_with_for_loop.append((i,j))
+
+print(clist_with_for_loop)
 
 
 #-------------------------------------------
 # 딕셔러니 컨프리핸션
+datas = (2,3,4)
+adic = { x : x**2 for x in datas}
+print(adic)
 
-
+word = 'LOVE LOL'
+wcnt = { letter:word.count(letter) for letter in word}
+print(wcnt)
 
 #------------------------------------------------
 # 셋 컨프리핸션
-
-
+"""
+blist = {n*2 for n in range(1,7)}
+print(blist)
+"""
 
 
 # -------------------------------------------------
