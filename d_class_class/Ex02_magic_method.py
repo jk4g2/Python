@@ -1,3 +1,30 @@
+class Sample:
+    def __init__(self,name,age):
+        self.name = name
+        self.age = age
+
+    def __str__(self):
+        return "이름 : {}\n나이: {} \n".format(self.name,self.age)
+
+    def __add__(self,other):
+        self.age += other
+
+    def __gt__(self, other):
+        if (self.age > other): return '성인입니다'
+        else: return '미성년입니다.'
+
+
+s = Sample("홍길동",13)
+print(s)
+s + 10
+print(s)
+
+print(s>20)
+
+
+
+
+
 """
     매직 메소드
 
@@ -14,8 +41,8 @@
         <<	    object.__rshift__(self, other)
         &	    object.__and__(self, other)
         ^	    object.__xor__(self, other)
-        |	    object.__or__(self, other)  
-        
+        |	    object.__or__(self, other)
+
 (2) Comparison Operators
         Operator	Method
         <	    object.__lt__(self, other)
@@ -24,7 +51,7 @@
         !=	    object.__ne__(self, other)
         >=	    object.__ge__(self, other)
         >	    object.__gt__(self, other)
-                
+
 (3) Extended Assignments
         Operator	Method
         +=	    object.__iadd__(self, other)
@@ -39,7 +66,7 @@
         &=	    object.__iand__(self, other)
         ^=	    object.__ixor__(self, other)
         |=	    object.__ior__(self, other)
-          
+
 (4) Unary Operators
         Operator	Method
         -	        object.__neg__(self)
@@ -50,6 +77,6 @@
         int()	    object.__int__(self)
         long()	    object.__long__(self)
         float()	    object.__float__(self)
-        oct()	    object.__oct__(self)        
+        oct()	    object.__oct__(self)
         hex()	    object.__hex__(self)
 """

@@ -89,10 +89,8 @@ print(func(4, 5, 6, 7, 8, 9))
 
 #----------------------------------------------------------------
 # (6) 키워드 인자 모으기 (**)
-def func(a,b,c=0, *args, **kwargs): """#키워드가 존재하지않을 경우,""" # **kwarg는 dictionary형태로 지정되지 않은 애들의 값을 받아준다
-    sum = a + b + c
-    for i in args:
-        sum += i
+def func(a,b,c=0, **kwargs): """#키워드가 존재하지않을 경우,""" # **kwarg는 dictionary형태로 지정되지 않은 애들의 값을 받아준다
+    sum = a + b
     for k in kwargs:
         sum += kwargs[k]
     return sum
