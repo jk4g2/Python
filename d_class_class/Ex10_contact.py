@@ -9,7 +9,7 @@ class Contact:
         print("이름:", self.name)
         print("전화번호:", self.phone_name)
         print("이메일:", self.email)
-        print("주소;", self.addr)
+        print("주소:", self.addr)
         print()
 
 def print_menu():
@@ -31,12 +31,8 @@ def set_contact():
     return c
 
 def print_contact(contact_list):
-    for contac in contact_list:
-        print("이름:" + contac.name)
-        print("전화번호:" + contac.phone_name)
-        print("이메일:" + contac.email)
-        print("주소:" + contac.addr)
-        print()
+    for contact in contact_list:
+        contact.print_info()
 
 def delete_contact(contact_list, name):
     for idx,value in enumerate(contact_list):
