@@ -52,6 +52,13 @@ math_score = [96, 99, 100, 55, 66]
 eng_score = [50,60,70,80,90]
 midterm_score = [kor_score, math_score, eng_score]
 
+average = []
+for i in range(0,5):
+        sum = midterm_score[0][i] + midterm_score[1][i] + midterm_score[2][i]
+        average.append(sum // 3)
+print(average)
+
+
 """
 for i in range(0,5):
     score = kor_score[i] + math_score[i]+ eng_score[i]
