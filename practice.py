@@ -66,8 +66,15 @@ for i in range(0,5):
 for i in range(0,5):
     print("총점 :" + str(total_score[i]) + "   "+ "평균: " +str(total_score[i]/3))
 """
-print(midterm_score)
+"""
+for i in zip(kor_score,math_score,eng_score):
+    print(sum(i))
+"""
 
+
+
+"""
 life = {'animal':{'cats':('Kim','Lee','Choi'),'octopi':(),'emus':()},
         'plants':{},
         'other':{}}
+"""
