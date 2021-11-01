@@ -6,10 +6,18 @@
 
 #-------------------------------------------------------------------
 # 1 - 존재하지 않는 경로
-
-
+from pathlib import PurePath
+j = PurePath('babo/myclass/myjob')
+print(j)
+print(j.parts)
 
 #-------------------------------------------------------------------
 # 2. 실제 경로로 아닌 가짜 경로를 관리하는 PurePath를 어디에 사용할까?
 # 아마도 경로나 파일명만 조작할 때 사용하지 않을까?
 # 해당 경로나 파일명이 현재 컴퓨터가 아니기에 이름만 관리하는 작업이 필요할 듯 싶다
+j = PurePath('\\192.168.0.99\share\kim')
+print(j)
+print(j.parts)
+
+result = j / 'python' / 'imsi' / 'temp'
+print(result)

@@ -25,13 +25,12 @@
     }
     Book b1 = new Book("자바란 무엇인가");
     Book b2 = new Book("파이썬?");
-    print("책의 갯수: "+ b1.count) // 1
-    print("책의 갯수: "+ b2.count) //1
+    print("책의 갯수: "+ b1.count) //2
+    print("책의 갯수: "+ b2.count) //2
 
 """
 class Book:
     cnt = 0;
-
     def __init__(self,title):
         self.title = title;
     # (1) 일반함수

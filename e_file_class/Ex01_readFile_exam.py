@@ -6,9 +6,19 @@
     존재하지 않는 파일명으로 예외가 발생해도 아무런 일을 하지 않는다
 """
 def count_words(filename):
-    pass  # pass 대신 완성
+    try:
+        f = open("./data/"+ filename, 'r',encoding="utf-8")
+        contents = f.read()
+        words = contents.split()
+        print(f.name + "의 단어 갯수 : " + str(len(words)))
+    except FileNotFoundError as e:
+        pass
+    else:
+        #print(str(len(words)))
+        f.close()
 
-# 존재하지 않는 파일명도 있음
+
+# 존재하지 않는 파일명도 있음FileNotFoundError
 filenames = ['sample.xml', 'xxxx.xxx', 'temp.json']
 for filename in filenames:
     count_words(filename)

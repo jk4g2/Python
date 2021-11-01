@@ -18,3 +18,28 @@
     - 파일을 열고 사용 후에는 반드시 닫아야 한다
 """
 
+
+try:
+    #f = open('C:/Python/workspace/e_file_class/data/data.txt','r', encoding='utf-8')
+
+    #with를 사용하게 되면 close()를 안해도된다.
+    with open('C:/Python/workspace/e_file_class/data/data.txt','r', encoding='utf-8') as f:
+        #한줄씩 읽는법
+        #while True:
+        #    line = f.readline()
+        #    if(not line): break;
+        #    print(line)
+
+        contents = f.read()
+        print("내용", contents)
+        words = contents.split()
+        print(words)
+        num = len(words)
+        print(num)
+
+except FileNotFoundError as e:
+    print('파일을 찾을 수 없습니다 - ',e)
+else:
+    print("파일명:",f.name, '총 단어수:', num)
+finally:
+    print('종료')
