@@ -45,7 +45,7 @@ while True:
     print('*' * target)
     target = target + 1
 """
-
+"""
 #7
 kor_score = [77, 88, 76, 44, 56]
 math_score = [96, 99, 100, 55, 66]
@@ -57,7 +57,7 @@ for i in range(0,5):
         sum = midterm_score[0][i] + midterm_score[1][i] + midterm_score[2][i]
         average.append(sum // 3)
 print(average)
-
+"""
 
 """
 for i in range(0,5):
@@ -74,7 +74,10 @@ for i in zip(kor_score,math_score,eng_score):
 
 
 """
-life = {'animal':{'cats':('Kim','Lee','Choi'),'octopi':(),'emus':()},
+life = {'animal':{'cats':('Kim','Lee','Choi'),
+                  'octopi':(),'emus':()
+                 },
         'plants':{},
-        'other':{}}
+        'other':{}
+        }
 """
