@@ -12,7 +12,7 @@ with open('./data/imsi.csv','wt',encoding='utf-8') as f: #t는 default값
 
 #2. csv로 저장된 파일을 읽어서 리스트 저장하기
 result = []
-with open('./data/imsi.csv','rt',encoding="utf-") as f:
+with open('./data/imsi.csv','rt',encoding="utf-8") as f:
     cin = csv.reader(f)
     result = [row for row in cin if row] # cin애라는에에서 row로 뽑아올건데.. row가 있으면 row로 뽑아오고 아니면 무시
 

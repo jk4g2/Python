@@ -22,7 +22,7 @@
 try:
     #f = open('C:/Python/workspace/e_file_class/data/data.txt','r', encoding='utf-8')
 
-    #with를 사용하게 되면 close()를 안해도된다.
+    # with를 사용하게 되면 close()를 안해도된다.
     with open('C:/Python/workspace/e_file_class/data/data.txt','r', encoding='utf-8') as f:
         #한줄씩 읽는법
         #while True:
