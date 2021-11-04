@@ -61,5 +61,3 @@ with open("./logtemp/temp_log.txt", 'a', encoding="utf-8") as f:
     for i in range(10):
         f.write(str(datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")) + "      " + str(random.randint(0,2^31-1)) + "\n")
     f.write("\n")
-
-print(test)
