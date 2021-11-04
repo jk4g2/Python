@@ -32,7 +32,7 @@
 class Book:
     cnt = 0;
     def __init__(self,title):
-        self.title = title;
+        self.title = title
     # (1) 일반함수
     def output(self):
         print('책 제목', self.title)
